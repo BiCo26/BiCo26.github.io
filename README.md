@@ -1,4 +1,4 @@
-# Bianca Cortes
+# Bianca Cortés
 ## Technical Product Manager
 
 I build products that connect user needs, technical systems, and practical outcomes.
