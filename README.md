@@ -1,5 +1,3 @@
-# BiCo26.github.io
-
 # Bianca Cortes
 ## Technical Product Manager
 
