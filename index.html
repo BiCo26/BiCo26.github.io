@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Bianca Cortes — Technical Product Manager building enterprise platforms, API-driven products, and AI workflows.">
+  <title>Bianca Cortes | Technical Product Manager</title>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #101719;
+      --surface: #192326;
+      --text: #edf3f2;
+      --muted: #b0c2c1;
+      --accent: #72e0cc;
+      --border: #354749;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); }
+
+    a:hover { text-decoration-thickness: 2px; }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -100px;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      color: var(--background);
+    }
+
+    .skip-link:focus { top: 1rem; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    .hero { padding: 6rem 0 4rem; }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { line-height: 1.2; }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      letter-spacing: -0.05em;
+      margin: 1rem 0;
+    }
+
+    .role {
+      font-size: clamp(1.2rem, 3vw, 1.7rem);
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .intro {
+      max-width: 720px;
+      font-size: 1.12rem;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.15rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--background);
+    }
+
+    .button:hover { border-color: var(--accent); }
+
+    section {
+      padding: 3rem 0;
+      scroll-margin-top: 2rem;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: -0.03em;
+      margin: 0 0 1rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card, .project {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.7rem;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.15rem;
+    }
+
+    .card p { color: var(--muted); }
+
+    .highlight {
+      display: block;
+      color: var(--accent);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 1.25rem 0;
+    }
+
+    .project { padding: clamp(1.5rem, 4vw, 2.5rem); }
+
+    .project-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .project-heading h3 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .badge {
+      color: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+    }
+
+    .project-description {
+      max-width: 740px;
+      color: var(--muted);
+    }
+
+    .project-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 1.5rem 0;
+    }
+
+    h4 { margin-bottom: 0.75rem; }
+
+    ul {
+      padding-left: 1.2rem;
+      color: var(--muted);
+    }
+
+    li { margin-bottom: 0.6rem; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tags li {
+      padding: 0.25rem 0.65rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
+    .contact {
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    footer {
+      padding: 2rem 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero { padding-top: 3.5rem; }
+      .cards, .project-columns { grid-template-columns: 1fr; }
+      .project-columns { gap: 0; }
+      nav { gap: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="container">
+    <header>
+      <a class="brand" href="#main">Bianca Cortes</a>
+      <nav aria-label="Main navigation">
+        <a href="#impact">Product impact</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Connect</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="intro-title">
+        <p class="eyebrow">AI · Enterprise Platforms · APIs</p>
+        <h1 id="intro-title">Bianca Cortes</h1>
+        <p class="role">Technical Product Manager</p>
+
+        <p class="intro">
+          I turn customer needs and complex technical challenges into
+          products people use. With 8+ years across enterprise SaaS,
+          travel, insurance, and data platforms, I lead products from
+          discovery through launch and iteration.
+        </p>
+
+        <p class="intro">
+          I’m also building Jobzy, a personal AI-powered job-search
+          assistant, to deepen my hands-on experience with AI workflows
+          and product development.
+        </p>
+
+        <div class="actions">
+          <a class="button primary" href="#projects">Explore Jobzy</a>
+          <a class="button" href="https://github.com/BiCo26">
+            View GitHub profile
+          </a>
+        </div>
+      </section>
+
+      <section id="impact" aria-labelledby="impact-title">
+        <h2 id="impact-title">Selected product impact</h2>
+        <p class="section-intro">
+          From customer-facing discovery to operational automation:
+          a few examples of products I’ve helped deliver.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Travel + Leisure</h3>
+            <span class="highlight">50% adoption</span>
+            <p>
+              Delivered Date-Only Search, influencing approximately
+              15% of bookings.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>NBA</h3>
+            <span class="highlight">8+ hours saved</span>
+            <p>
+              Led a data optimization initiative with Data Engineering,
+              automating SQL pipelines into a self-service Tableau
+              dashboard and eliminating manual work.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Orion180 Insurance</h3>
+            <span class="highlight">Simpler reconciliation</span>
+            <p>
+              Delivered a Cash Application platform that streamlined
+              payment reconciliation, improved financial visibility,
+              and reduced manual effort.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Building in practice</h2>
+        <p class="section-intro">
+          Applying product thinking through hands-on implementation,
+          testing, and iteration.
+        </p>
+
+        <article class="project">
+          <div class="project-heading">
+            <h3>Jobzy-Agent</h3>
+            <span class="badge">Personal project · In development</span>
+          </div>
+
+          <p class="project-description">
+            An AI-powered job-search assistant I’m building to help
+            organize opportunities and evaluate how well a job matches
+            my experience.
+          </p>
+
+          <div class="project-columns">
+            <div>
+              <h4>Working today</h4>
+              <ul>
+                <li>Accepts a pasted job description through a form.</li>
+                <li>Extracts structured job requirements using an AI model.</li>
+                <li>Retrieves my master résumé from Google Drive.</li>
+                <li>Compares job requirements with résumé evidence.</li>
+                <li>Saves the assessment, including strengths and gaps,
+                  to PostgreSQL.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>In development</h4>
+              <ul>
+                <li>Duplicate detection with options to review or
+                  reevaluate an existing job.</li>
+                <li>A dashboard for reviewing assessments and tracking
+                  application status.</li>
+                <li>Tailored résumé generation with human approval.</li>
+              </ul>
+            </div>
+          </div>
+
+          <ul class="tags" aria-label="Project technologies">
+            <li>n8n</li>
+            <li>PostgreSQL</li>
+            <li>Docker</li>
+            <li>OpenAI API</li>
+            <li>Google Drive API</li>
+          </ul>
+
+          <a class="button primary"
+             href="https://github.com/BiCo26/Jobzy-agent">
+            Explore the repository →
+          </a>
+        </article>
+      </section>
+
+      <section class="contact" id="contact"
+               aria-labelledby="contact-title">
+        <h2 id="contact-title">Let’s connect</h2>
+        <p class="section-intro">
+          Interested in my product work or what I’m building?
+          Get in touch.
+        </p>
+        <div class="actions">
+          <a class="button primary"
+             href="mailto:Bianca.Cortes.Product@gmail.com">
+            Email me
+          </a>
+          <a class="button" href="https://github.com/BiCo26">
+            GitHub
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Bianca Cortes · Technical Product Manager
+    </footer>
+  </div>
+</body>
+</html>
